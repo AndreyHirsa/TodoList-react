@@ -1,23 +1,21 @@
 import React, {useState} from 'react'
 import TaskForm from "./Todo/task_form";
-
-import "./reset.css";
-import './index.css';
 import {TaskContainer} from "./Todo/task_container";
 
 
-export let tasks = [{taskName: "first", taskState: "active", id: "123"},
-    {taskName: "second", taskState: "active", id: "23"}]
+import "./reset.css";
+import './index.css';
+
 
 
 function App() {
-    let [state, setState] = useState(tasks);
-
+    const [inputText, setInputText] = useState("");
+    const [todos,setTodos]=useState([])
     return (
         <div className="wrapper">
             <div className="inner">
-                <TaskForm/>
-                <TaskContainer tasks={state}/>
+                <TaskForm todos={todos} setTodos={setTodos} inputText={inputText} setInputText={setInputText}/>
+                <TaskContainer setTodos={setTodos} todos={todos}/>
             </div>
         </div>
     );

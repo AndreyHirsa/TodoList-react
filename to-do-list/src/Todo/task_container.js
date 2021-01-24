@@ -1,12 +1,12 @@
 import React from 'react'
 import {Task} from "./task";
 
-export function TaskContainer(props){
+export function TaskContainer({todos,setTodos}){
     return(
         <div className="tasks_container">
-            {props.tasks.map((task,index)=>{
-                return <Task task={task} index={index} key={task.id}/>
-            })}
+            {todos.map((todo,index)=>(
+                   <Task setTodos={setTodos} todo={todo} todos={todos} text={todo.text} key={todo.id} index={index}/>
+            ))}
         </div>
     )
 }
