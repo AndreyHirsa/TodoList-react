@@ -1,16 +1,14 @@
 import React, {useState} from 'react'
 import TaskForm from "./Todo/task_form";
-import {TaskContainer} from "./Todo/task_container";
-
-
-import "./reset.css";
-import './index.css';
-
+import TaskContainer from "./Todo/task_container";
 
 
 function App() {
+
     const [inputText, setInputText] = useState("");
+
     const [todos,setTodos]=useState([])
+
     return (
         <div className="wrapper">
             <div className="inner">

@@ -60,13 +60,17 @@ i:hover{
   color:#FFFFFF;
 }
 
-.button__add:hover{
-
+.disabled{
+  background-color: #9699a3;
 }
 
 .tasks_container{
   width:100%;
   height:460px;
+}
+
+input[type="text"]{
+  border:1px solid #000000;
 }
 
 .task{

@@ -1,7 +1,8 @@
 import React from 'react'
 import {Task} from "./task";
 
-export function TaskContainer({todos,setTodos}){
+export default function TaskContainer({todos,setTodos}){
+    
     return(
         <div className="tasks_container">
             {todos.map((todo,index)=>(

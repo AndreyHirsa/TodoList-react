@@ -2,8 +2,9 @@ import React from 'react'
 
 
 export function Task({text, todos, todo, setTodos,index}) {
+
     function deleteTask() {
-        setTodos(todos.filter(el => el.id !== todo.id))
+        setTodos(todos.filter(item => item.id !== todo.id))
     }
 
     function completeTask() {
